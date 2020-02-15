@@ -187,40 +187,11 @@ i:hover {
     height: 55px;
     border-radius: 50%;
     border: 2px solid #666d89;
+    display: flex;
 }
 
 .icon img {
-    position: relative;
-}
-
-.pen {
-    top: 12px;
-    left: 12px;
-}
-
-.bulb {
-    top: 11px;
-    left: 17px;
-}
-
-.heart {
-    top: 14px;
-    left: 12px;
-}
-
-.phone {
-    top: 12px;
-    left: 16px;
-}
-
-.bubble {
-    top: 13px;
-    left: 12px;
-}
-
-.star {
-    top: 11px;
-    left: 12px;
+    margin: auto;
 }
 
 .services-text-container {
