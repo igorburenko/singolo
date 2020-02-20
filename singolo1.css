@@ -40,6 +40,7 @@ nav ul {
 }
 
 nav li {
+    text-decoration:none;
     display: block;
     font-size: 12px;
     color: #ffffff;
@@ -49,8 +50,13 @@ nav li {
     cursor: pointer;
 }
 
-nav li:hover,
-nav li.active{
+nav a {
+    all: inherit;
+    margin: 0;
+}
+
+nav a:hover,
+nav a.active{
     color: #f06c64;
 }
 
@@ -176,27 +182,30 @@ nav li.active{
     letter-spacing: -0.02px;
 }
 
-.services-tips {
+.services__tips {
     width: 940px;
     height: 232px;
     /*background-color: #f06c64;*/
-    margin: 49px auto 0 auto;
+    margin: 50px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-.service-container {
+.item {
     display: flex;
     width: 300px;
-    height: 84px;
-    margin-bottom: 40px;
+    height: 85px;
+    margin-bottom: 38px;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
-.service-container.margin {
+.item.central {
     margin-left: 20px;
+    margin-right: 20px;
 }
 
-.icon {
+.item__icon {
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -204,11 +213,11 @@ nav li.active{
     display: flex;
 }
 
-.icon img {
+.item__icon img {
     margin: auto;
 }
 
-.services-text-container {
+.item__text-container {
     /*background-color: lawngreen;*/
     padding-left: 20px;
     margin-top: -2px;
@@ -217,19 +226,21 @@ nav li.active{
     line-height: 18px;
 }
 
-.service-container h3 {
+.item h3 {
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
     font-weight: 900;
     margin: 0;
+
 }
 
-.service-container p {
+.item p {
     font-size: 12px;
     line-height: 21px;
     color: #767e9e;
     font-weight: 400;
     margin: 10px 0 0 0;
     text-align: justify;
+
 }
