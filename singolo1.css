@@ -83,6 +83,13 @@ nav li {
     position: relative;
 }
 
+.slider>h5 {
+    margin: 0;
+    width: 0.01px;
+    height: .01px;
+    font-size: 0.01px;
+}
+
 /*Arrow*/
 .arrow {
     border: solid #ca4549;
