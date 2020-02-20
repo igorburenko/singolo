@@ -182,7 +182,7 @@ nav a {
 .services__items-section {
     width: 940px;
     height: 232px;
-    margin: 50px auto 0 auto;
+    margin: 48px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -201,6 +201,8 @@ nav a {
 }
 
 .item-service__icon {
+    margin-top: 2px;
+    margin-right: 1px;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -214,7 +216,6 @@ nav a {
 
 .item-service__text-container {
     padding-left: 20px;
-    margin-top: -2px;
     width: 220px;
     height: 100px;
     line-height: 18px;
