@@ -1,0 +1,42 @@
+/* Сброс css */
+ul {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.block-content {
+    width: 940px;
+    margin: 0 auto;
+}
