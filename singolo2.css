@@ -42,7 +42,7 @@ body {
     border-bottom: solid 6px rgb(50, 55, 70);
 }
 
-.content {
+.block-content {
     width: 940px;
     margin: 0 auto;
 }
