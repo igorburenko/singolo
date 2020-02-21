@@ -1,0 +1,232 @@
+/* Сброс css */
+ul {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.portfolio {
+    height: 864px;
+    background-color: rgb(45, 48, 58);
+    border-bottom: solid 6px rgb(50, 55, 70);
+}
+
+.content {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.portfolio__title {
+    padding: 60px 0 0;
+    font-size: 26px;
+    color: #666d89;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+}
+
+.portfolio__text {
+    width: 940px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    margin-top: 18px;
+}
+
+.portfolio__buttons {
+    display: flex;
+    margin-top: 11px;
+    padding-left: 1px;
+}
+
+.button-portfolio {
+    text-decoration: none;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #2d303a;
+    border: 1px solid #666d89;
+    font-size: 11px;
+    line-height: 20px;
+    color: #767e9e;
+    font-weight: 400;
+    letter-spacing: 0.27px;
+    cursor: pointer;
+}
+
+.portfolio__button-item {
+    padding: 0 7px;
+    margin-right: 10px;
+}
+
+.portfolio__button-item_active,
+.button-portfolio:hover {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+.portfolio__pictures {
+    max-height: 605px;
+    margin-top: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.image-portfolio {
+    width: 220px;
+    height: 187px;
+    background-color: #464b5e;
+}
+
+.portfolio__image-item {
+    margin-bottom: 20px;
+    list-style-type: none;
+    display: block;
+}
+
+.about {
+    height: 728px;
+    background-color: #f2f2f2;
+    border-bottom: solid 6px #ffffff;
+}
+
+
+.about__title {
+    padding: 60px 0 0;
+    font-size: 26px;
+    color: #666d89;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+}
+
+.about__text {
+    width: 940px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    margin-top: 17px;
+}
+
+.about__persons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.person {
+    width: 300px;
+}
+
+.person__title {
+    height: 22px;
+    font-size: 16px;
+    color: #666d89;
+    font-weight: 900;
+    padding-top: 12px;
+    letter-spacing: -0.25px;
+    overflow: hidden;
+}
+
+.person__text {
+    width: 300px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 21px;
+    color: #767e9e;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: -0.25px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.social {
+    display: flex;
+}
+
+.person__social {
+    margin-top: 26px;
+}
+
+.item-social {
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    border: 1px solid #666d89;
+    display: flex;
+}
+
+.item-social:hover {
+    cursor: pointer;
+}
+
+.social__item {
+    margin-right: 8px;
+}
+
+.icon-facebook {
+    background: url(assest/img/about-us/facebook.png) no-repeat center;
+}
+
+.icon-facebook:hover {
+    background: url(assest/img/about-us/facebook-hover.png) no-repeat center #666d89;
+}
+
+.icon-google {
+    background: url(assest/img/about-us/google+.png) no-repeat center;
+}
+
+.icon-google:hover {
+    background: url(assest/img/about-us/google+-hover.png) no-repeat center #666d89;
+}
+
+.icon-twitter {
+     background: url(assest/img/about-us/twitter.png) no-repeat center;
+ }
+
+.icon-twitter:hover {
+    background: url(assest/img/about-us/twitter-hover.png) no-repeat center #666d89;
+}
+
+.icon-linkedin {
+    background: url(assest/img/about-us/linkedin.png) no-repeat center;
+}
+
+.icon-linkedin:hover {
+    background: url(assest/img/about-us/linkedin-hover.png) no-repeat center #666d89;
+}
