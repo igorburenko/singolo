@@ -21,9 +21,30 @@ dd {
     margin: 0;
 }
 
-ul[class],
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
 ol[class] {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active,
+a:focus,
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
 }
 
 body {
@@ -36,7 +57,254 @@ body {
     margin: 0 auto;
 }
 
+.quote {
+    height: 648px;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+}
+
 .block-content {
     width: 940px;
     margin: 0 auto;
+}
+
+.quote__description {
+
+}
+
+.quote__title {
+    font-size: 30px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-weight: 900;
+    padding-top: 68px;
+}
+
+.quote__text {
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f0d8d9;
+    font-weight: 300;
+    padding-top: 27px;
+    letter-spacing: -0.04px;
+}
+
+.form-contact-wrapper {
+    display: flex;
+    margin-top: 47px;
+}
+
+.form-quote {
+
+}
+
+.form-item {
+    display: block;
+    width: 603px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #f48c8f;
+    font-weight: 400;
+    padding-left: 15px;
+}
+
+.form-item__textarea {
+    height: 192px;
+    width: 602px;
+    resize: none;
+    padding-top: 8px;
+}
+
+.form-item::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 20px;
+    color: #f48c8f;
+    font-weight: 400;
+}
+
+.form-item::-moz-placeholder {
+    font-size: 12px;
+    line-height: 20px;
+    color: #f48c8f;
+    font-weight: 400;
+}
+
+.form-item:-moz-placeholder {
+    font-size: 12px;
+    line-height: 20px;
+    color: #f48c8f;
+    font-weight: 400;
+}
+
+.form-item:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 20px;
+    color: #f48c8f;
+    font-weight: 400;
+}
+
+.form-quote__submit-button {
+    display: block;
+    width: 75px;
+    height: 26px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #f9cecf;
+    font-weight: 400;
+}
+
+.form-quote__submit-button:hover {
+    background-color: #cf5750;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-quote__submit-button:active {
+    background-color: #f1e5e6;
+    color: #d6564f;
+}
+
+.form-contact-wrapper__contact-info {
+    margin-left: 20px;
+}
+
+.contact-info__title {
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-weight: 900;
+}
+
+.contact-info__text {
+    width: 300px;
+    height: 80px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-weight: 400;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.item-contact {
+    margin-bottom: 7px;
+    display: flex;
+}
+
+.image-wrapper {
+    width: 13px;
+    height: 15px;
+    /*display: block;*/
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.item-contact__icon {
+    margin: auto;
+    /*justify-content: center;*/
+    /*vertical-align: center;*/
+
+
+}
+
+.contact-info__contact-items {
+    margin-top: 31px;
+    margin-left: 1px;
+}
+
+.item-contact__description {
+    font-size: 12px;
+    color: #f0d8d9;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.footer {
+    height: 76px;
+    background-color: #2d303a;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.footer__copyright {
+    font-size: 12px;
+    color: #666d89;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+/*social*/
+
+.social {
+    display: flex;
+}
+
+.person__social {
+    margin-top: 26px;
+}
+
+.item-social {
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    border: 1px solid #666d89;
+    display: flex;
+}
+
+.item-social:hover {
+    cursor: pointer;
+}
+
+.social__item {
+    margin-right: 8px;
+}
+
+.icon-facebook {
+    background: url(assest/img/about-us/facebook.png) no-repeat center;
+}
+
+.icon-facebook:hover {
+    background: url(assest/img/about-us/facebook-hover.png) no-repeat center #666d89;
+}
+
+.icon-google {
+    background: url(assest/img/about-us/google+.png) no-repeat center;
+}
+
+.icon-google:hover {
+    background: url(assest/img/about-us/google+-hover.png) no-repeat center #666d89;
+}
+
+.icon-twitter {
+    background: url(assest/img/about-us/twitter.png) no-repeat center;
+}
+
+.icon-twitter:hover {
+    background: url(assest/img/about-us/twitter-hover.png) no-repeat center #666d89;
+}
+
+.icon-linkedin {
+    background: url(assest/img/about-us/linkedin.png) no-repeat center;
+}
+
+.icon-linkedin:hover {
+    background: url(assest/img/about-us/linkedin-hover.png) no-repeat center #666d89;
 }

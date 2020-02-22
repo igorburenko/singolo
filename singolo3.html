@@ -6,16 +6,78 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Singolo</title>
-    <link rel="stylesheet" href="singolo2.css">
+    <link rel="stylesheet" href="singolo3.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext');
     </style>
 </head>
 <body>
 <div class="wrapper">
-    <article class="portfolio">
+    <article class="quote">
         <div class="block-content">
+            <div class="quote__description">
+                <h3 class="quote__title">Get a Quote</h3>
+                <p class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
+                    non
+                    commodo luctus,
+                    nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh.</p>
+            </div>
+            <div class="form-contact-wrapper">
+                <form class="form-quote" action="" class="form-quote">
+                    <input class="form-item form-quote__name" type="text" placeholder="Name (Required)">
+                    <input class="form-item form-quote__email" type="email" placeholder="Email (Required)">
+                    <input class="form-item form-quote__subject" type="text" placeholder="Subject">
+                    <textarea class="form-item form-item__textarea form-quote__description" name="description"
+                              id="description" cols="30"
+                              rows="10" placeholder="Describe your project in detail..."></textarea>
+                    <input class="form-quote__submit-button" type="submit">
+                </form>
+                <div class="contact-info form-contact-wrapper__contact-info">
+                    <div class="contact-info__title">Contact Information</div>
+                    <div class="contact-info__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                        Fusce
+                        vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus.
+                        Morbi at aliquet turpis, et consequat felis.
+                    </div>
+                    <ul class="contact-info__contact-items">
+                        <li class="item-contact">
+                            <div class="image-wrapper">
+                                <img class="item-contact__icon" src="assest/img/quote/location.png" alt="location">
+                            </div>
+                            <a class="item-contact__description"
+                               href="https://www.google.com/maps/search/Elm+St.+14%2F05+Lost+City/@46.4456398,30.7644946,14z/data=!3m1!4b1">
+                                Elm St. 14/05 Lost City
+                            </a>
+                        </li>
+                        <li class="item-contact">
+                            <div class="image-wrapper">
+                                <img class="item-contact__icon" src="assest/img/quote/phone.png" alt="phone">
+                            </div>
+                            <a class="item-contact__description" href="tel:+035283318635">03528 331 86 35</a>
+                        </li>
+                        <li class="item-contact">
+                            <div class="image-wrapper">
+                                <img class="item-contact__icon" src="assest/img/quote/mail.png" alt="mail">
+                            </div>
+                            <a class="item-contact__description" href="mailto:info@singolo.com">info@singolo.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </article>
+    <footer class="footer">
+            <p class="footer__copyright">
+                © Copyright 2013
+            </p>
+            <ul class="social footer__social">
+                <li class="item-social icon-facebook social__item"><a href="#"></a></li>
+                <li class="item-social icon-google social__item"><a href="#"></a></li>
+                <li class="item-social icon-twitter social__item"><a href="#"></a></li>
+                <li class="item-social icon-linkedin social__item"><a href="#"></a></li>
+            </ul>
+    </footer>
+</div>
 </body>
 </html>
