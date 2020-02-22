@@ -1,3 +1,31 @@
+/* Сброс css */
+ul {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
@@ -15,10 +43,11 @@ body {
     justify-content: space-between;
     text-transform: uppercase;
     border-bottom: 6px solid #323746;
+    padding: 0 40px;
 }
 
 .header__logo {
-    margin: 28px 0 0 40px;
+    margin-top: 28px;
 }
 
 .logo {
@@ -37,15 +66,15 @@ body {
 }
 
 .header__navigation {
-    margin: 26px 39px 0 0;
+    margin-top: 42px;
 
 }
 
-nav ul {
+.navigation ul {
     display: flex;
 }
 
-nav li {
+.navigation li {
     list-style: none;
     margin-left: 13px;
 }
@@ -166,23 +195,24 @@ nav li {
     background-color: #f2f2f2;
     height: 494px;
     border-bottom: 6px solid #ffffff;
+    padding: 0 40px;
 }
 
-.services__description h2 {
+.services__title {
     margin: 0;
-    padding: 59px 0 0 40px;
+    padding-top: 59px;
     display: block;
     font-size: 30px;
     color: #666d89;
     font-weight: 900;
 }
 
-.services__description p {
-    width: 942px;
+.services__text {
+    width: 940px;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
-    margin: 18px 0 0 39px;
+    margin-top: 18px;
     color: #767e9e;
     font-weight: 300;
     letter-spacing: -0.02px;

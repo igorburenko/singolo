@@ -161,6 +161,7 @@ body {
     line-height: 20px;
     color: #f9cecf;
     font-weight: 400;
+    margin: 0 auto;
 }
 
 .form-quote__submit-button:hover {
