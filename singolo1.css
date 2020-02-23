@@ -112,11 +112,12 @@ body {
     position: relative;
 }
 
-.slider>h5 {
-    margin: 0;
-    width: 0.01px;
-    height: .01px;
-    font-size: 0.01px;
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 /*Arrow*/
