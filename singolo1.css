@@ -37,7 +37,7 @@ body {
 }
 
 .header {
-    height: 89px;
+    min-height: 89px;
     background-color: #2d303a;
     display: flex;
     justify-content: space-between;
@@ -107,7 +107,7 @@ body {
 
 .slider {
     background-color: #f06c64;
-    height: 594px;
+    min-height: 594px;
     border-bottom: 6px solid #ea676b;
     position: relative;
 }
@@ -116,7 +116,7 @@ body {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
-    height: 1px;
+    min-height: 1px;
     margin: -1px;
 }
 
@@ -194,7 +194,7 @@ body {
 /*services*/
 .services {
     background-color: #f2f2f2;
-    height: 494px;
+    min-height: 494px;
     border-bottom: 6px solid #ffffff;
     padding: 0 40px;
 }
@@ -210,7 +210,7 @@ body {
 
 .services__text {
     width: 940px;
-    height: 57px;
+    min-height: 57px;
     font-size: 18px;
     line-height: 30px;
     margin-top: 18px;
@@ -221,7 +221,7 @@ body {
 
 .services__items-section {
     width: 940px;
-    height: 232px;
+    min-height: 232px;
     margin: 48px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -257,7 +257,7 @@ body {
 .item-service__text-container {
     padding-left: 20px;
     width: 220px;
-    height: 100px;
+    min-height: 100px;
     line-height: 18px;
 }
 
