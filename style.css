@@ -234,6 +234,8 @@ body {
     color: #767e9e;
     font-weight: 300;
     letter-spacing: -0.05px;
+    overflow: hidden;
+    text-align: justify;
 }
 
 .services__items-section {
@@ -248,13 +250,13 @@ body {
 .item-service {
     display: flex;
     width: 300px;
-    height: 85px;
+    height: 87px;
     overflow: hidden;
     text-overflow: clip;
 }
 
 .services__item {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
 }
 
 .item-service__icon {
@@ -385,7 +387,7 @@ body {
 
 
 .about__title {
-    padding: 60px 0 0;
+    padding: 59px 0 0;
     font-size: 26px;
     color: #666d89;
     font-weight: 900;
@@ -399,7 +401,10 @@ body {
     color: #767e9e;
     font-weight: 300;
     letter-spacing: -0.2px;
-    margin-top: 17px;
+    margin-top: 18px;
+}
+
+.about__text p {
     text-align: justify;
 }
 
@@ -430,10 +435,13 @@ body {
     line-height: 21px;
     color: #767e9e;
     font-weight: 400;
-    text-align: justify;
     letter-spacing: -0.25px;
     margin-top: 8px;
     overflow: hidden;
+}
+
+.person__text p {
+    text-align: justify;
 }
 
 .social {
@@ -525,6 +533,7 @@ body {
     font-weight: 300;
     padding-top: 27px;
     letter-spacing: -0.04px;
+    text-align: justify;
 }
 
 .form-contact-wrapper {
