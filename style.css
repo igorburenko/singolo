@@ -108,11 +108,13 @@ body {
     font-weight: 700;
     text-align: right;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 
 .navigation__item:hover,
 .navigation__item_active {
     color: #f06c64;
+    transition: color 0.2s linear;
 }
 
 .navigation__dot {
@@ -145,10 +147,12 @@ body {
     padding: 8px;
     border-radius: 14%;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 
 .arrow:hover {
     border-color: #673333;
+    transition: all 0.2s ease-out;
 }
 
 .slider__arrow_left {
@@ -345,6 +349,7 @@ body {
     font-weight: 400;
     letter-spacing: 0.27px;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 
 .portfolio__button-item {
@@ -356,6 +361,7 @@ body {
 .button-portfolio:hover {
     color: #dedede;
     border: 1px solid #c5c5c5;
+    transition: all 0.2s ease-out;
 }
 
 .portfolio__pictures {
@@ -424,6 +430,7 @@ body {
     color: #666d89;
     font-weight: 900;
     padding-top: 12px;
+    padding-left: 1px;
     letter-spacing: -0.25px;
     overflow: hidden;
 }
@@ -436,8 +443,13 @@ body {
     color: #767e9e;
     font-weight: 400;
     letter-spacing: -0.25px;
-    margin-top: 8px;
+    margin-top: 9px;
     overflow: hidden;
+}
+
+.person__title h3 {
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .person__text p {
@@ -470,34 +482,42 @@ body {
 
 .icon-facebook {
     background: url(assest/img/about-us/facebook.png) no-repeat center;
+    transition: all 0.2s ease-out;
 }
 
 .icon-facebook:hover {
     background: url(assest/img/about-us/facebook-hover.png) no-repeat center #666d89;
+    transition: all 0.2s ease-out;
 }
 
 .icon-google {
     background: url(assest/img/about-us/google+.png) no-repeat center;
+    transition: all 0.2s ease-out;
 }
 
 .icon-google:hover {
     background: url(assest/img/about-us/google+-hover.png) no-repeat center #666d89;
+    transition: all 0.2s ease-out;
 }
 
 .icon-twitter {
     background: url(assest/img/about-us/twitter.png) no-repeat center;
+    transition: all 0.2s ease-out;
 }
 
 .icon-twitter:hover {
     background: url(assest/img/about-us/twitter-hover.png) no-repeat center #666d89;
+    transition: all 0.2s ease-out;
 }
 
 .icon-linkedin {
     background: url(assest/img/about-us/linkedin.png) no-repeat center;
+    transition: all 0.2s ease-out;
 }
 
 .icon-linkedin:hover {
     background: url(assest/img/about-us/linkedin-hover.png) no-repeat center #666d89;
+    transition: all 0.2s ease-out;
 }
 
 
@@ -607,12 +627,14 @@ body {
     color: #f9cecf;
     font-weight: 400;
     margin: 0 auto;
+    transition: all 0.2s ease-out;
 }
 
 .form-quote__submit-button:hover {
     background-color: #cf5750;
     color: #ffffff;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 
 .form-quote__submit-button:active {
