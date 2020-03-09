@@ -315,10 +315,13 @@ body {
 
 .portfolio__title {
     padding: 59px 0 0;
-    font-size: 26px;
     color: #666d89;
+}
+
+.portfolio__title h3 {
+    font-size: 30px;
     font-weight: 900;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.2px;
 }
 
 .portfolio__text {
@@ -394,10 +397,12 @@ body {
 
 .about__title {
     padding: 59px 0 0;
-    font-size: 26px;
     color: #666d89;
+}
+
+.about__title h3 {
     font-weight: 900;
-    letter-spacing: 0.4px;
+    font-size: 30px;
 }
 
 .about__text {
