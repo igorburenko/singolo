@@ -14,40 +14,55 @@
 <body>
 <div class="wrapper">
     <header class="header" id="home">
-        <h1 class="logo header__logo">singolo<span>*</span></h1>
-        <nav class="navigation header__navigation">
-            <ul>
-                <li><a class="navigation__item navigation__item_active" href="#home">home</a></li>
-                <li class="navigation__dot">·</li>
-                <li><a class="navigation__item" href="#services">services</a></li>
-                <li class="navigation__dot">·</li>
-                <li><a class="navigation__item" href="#portfolio">portfolio</a></li>
-                <li class="navigation__dot">·</li>
-                <li><a class="navigation__item" href="#about">about</a></li>
-                <li class="navigation__dot">·</li>
-                <li><a class="navigation__item" href="#contact">contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-wrapper">
+            <h1 class="logo header__logo">singolo<span>*</span></h1>
+            <nav class="navigation header__navigation" id="navigation">
+                <ul>
+                    <li><a class="navigation__item navigation__item_active" id="nav-home" href="#slider">home</a></li>
+                    <li class="navigation__dot">·</li>
+                    <li><a class="navigation__item" href="#services" id="nav-services">services</a></li>
+                    <li class="navigation__dot">·</li>
+                    <li><a class="navigation__item" href="#portfolio" id="nav-portfolio">portfolio</a></li>
+                    <li class="navigation__dot">·</li>
+                    <li><a class="navigation__item" href="#about" id="nav-about">about</a></li>
+                    <li class="navigation__dot">·</li>
+                    <li><a class="navigation__item" href="#contact" id="nav-contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
+        <div id="slider"></div>
         <article class="slider">
             <h5 class="visually-hidden">slider</h5>
-            <span class="arrow slider__arrow_left"></span>
-            <div class="picture">
-                <div class="picture__iphone_vertical">
-                    <img id="iphone-vertical-shadow" src="assest/img/iphone/iPhone-Vertical-shadow.png" alt="">
-                    <img id="iphone-vertical-body" src="assest/img/iphone/iPhone-Horizontal.png" alt="phone-vertical">
-                    <img id="iphone-vertical-screen" src="assest/img/iphone/iPhone-Vertical-screen.png" alt="">
+
+            <div class="slider__Picture-wrapper">
+                <div class="picture-1">
+                    <div class="picture__iphone_vertical" id="iphone-vertical">
+                        <img id="iphone-vertical-shadow" src="assest/img/iphone/iPhone-Vertical-shadow.png" alt="">
+                        <img id="iphone-vertical-body" src="assest/img/iphone/iPhone-Horizontal.png"
+                             alt="phone-vertical">
+                        <img id="iphone-vertical-screen" src="assest/img/iphone/iPhone-Vertical-screen.png" alt="">
+                    </div>
+                    <div class="picture__iphone_horizontal" id="iphone-horizontal">
+                        <img id="iphone-horizontal-shadow" src="assest/img/iphone/iPhone-Vertical-shadow.png" alt="">
+                        <img id="iphone-horizontal-body" src="assest/img/iphone/iPhone-Horizontal.png"
+                             alt="phone-horizontal">
+                        <img id="iphone-horizontal-screen" src="assest/img/iphone/iPhone-Horizontal-screen.png" alt="">
+                    </div>
                 </div>
-                <div class="picture__iphone_horizontal">
-                    <img id="iphone-horizontal-shadow" src="assest/img/iphone/iPhone-Vertical-shadow.png" alt="">
-                    <img id="iphone-horizontal-body" src="assest/img/iphone/iPhone-Horizontal.png" alt="phone-horizontal">
-                    <img id="iphone-horizontal-screen" src="assest/img/iphone/iPhone-Horizontal-screen.png" alt="">
+
+                <div class="picture-2 hidden_opacity">
+                    <img id="iphone2-vertical-mini1" src="assest/img/iphone/phone2_mini.png" alt="phone-vertical">
+                    <img id="iphone2-vertical-mini2" src="assest/img/iphone/phone2_mini.png" alt="phone-vertical">
+                    <img id="iphone2-vertical-body" src="assest/img/iphone/phone2_green.png" alt="phone-vertical">
                 </div>
             </div>
+            <span class="arrow slider__arrow_left"></span>
             <span class="arrow slider__arrow_right"></span>
         </article>
-        <article class="services" id="services">
+        <div id="services"></div>
+        <article class="services">
             <div class="services__description">
                 <h2 class="services__title">Our Services</h2>
                 <p class="services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -58,7 +73,8 @@
             </div>
             <div class="services__items-section">
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="pen" src="assest/img/services-icons/pen.png" alt="pen"></div>
+                    <div class="item-service__icon"><img class="pen" src="assest/img/services-icons/pen.png" alt="pen">
+                    </div>
                     <div class="item-service__text-container">
                         <h3>Custom Design</h3>
                         <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in
@@ -67,7 +83,8 @@
                     </div>
                 </div>
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="bulb" src="assest/img/services-icons/bulb.png" alt="bulb"></div>
+                    <div class="item-service__icon"><img class="bulb" src="assest/img/services-icons/bulb.png"
+                                                         alt="bulb"></div>
                     <div class="item-service__text-container">
                         <h3>Inovative Ideas</h3>
                         <p>Quisque luctus, quam eget molestie commodo,
@@ -76,7 +93,8 @@
                     </div>
                 </div>
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="heart" src="assest/img/services-icons/heart.png" alt="heart"></div>
+                    <div class="item-service__icon"><img class="heart" src="assest/img/services-icons/heart.png"
+                                                         alt="heart"></div>
                     <div class="item-service__text-container">
                         <h3>Love Is The Answer</h3>
                         <p>Nulla sed nunc et tortor luctus faucibus.
@@ -85,7 +103,8 @@
                     </div>
                 </div>
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="phone" src="assest/img/services-icons/phone.png" alt="phone"></div>
+                    <div class="item-service__icon"><img class="phone" src="assest/img/services-icons/phone.png"
+                                                         alt="phone"></div>
                     <div class="item-service__text-container">
                         <h3>Responsive Layout</h3>
                         <p>Sed porttitor placerat rhoncus.
@@ -94,7 +113,8 @@
                     </div>
                 </div>
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="bubble" src="assest/img/services-icons/bubble.png" alt="bubble"></div>
+                    <div class="item-service__icon"><img class="bubble" src="assest/img/services-icons/bubble.png"
+                                                         alt="bubble"></div>
                     <div class="item-service__text-container">
                         <h3>24 / 7 Support</h3>
                         <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat.
@@ -103,7 +123,8 @@
                     </div>
                 </div>
                 <div class="item-service services__item">
-                    <div class="item-service__icon"><img class="star" src="assest/img/services-icons/star.png" alt="star"></div>
+                    <div class="item-service__icon"><img class="star" src="assest/img/services-icons/star.png"
+                                                         alt="star"></div>
                     <div class="item-service__text-container">
                         <h3>Feel Like A Star</h3>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae,
@@ -113,28 +134,30 @@
                 </div>
             </div>
         </article>
-        <article class="portfolio" id="portfolio">
+        <div id="portfolio"></div>
+        <article class="portfolio">
             <div class="block-content">
                 <div class="portfolio__title">
                     <h3>Portfolio</h3>
                 </div>
                 <div class="portfolio__text">
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                        elit.</p>
                 </div>
-                <ul class="portfolio__buttons">
+                <ul class="portfolio__buttons" id="portfolio_buttons">
                     <li class="button-portfolio portfolio__button-item portfolio__button-item_active">All</li>
                     <li class="button-portfolio portfolio__button-item">Web Design</li>
                     <li class="button-portfolio portfolio__button-item">Graphic Design</li>
                     <li class="button-portfolio portfolio__button-item">Artwork</li>
                 </ul>
-                <ul class="portfolio__pictures">
+                <ul class="portfolio__pictures" id="portfolio-pictures">
                     <li class="image-portfolio portfolio__image-item">
                         <img src="assest/img/portfolio/1.png" alt="portfolio-image-item">
                     </li>
                     <li class="image-portfolio portfolio__image-item">
                         <img src="assest/img/portfolio/2.png" alt="portfolio-image-item">
                     </li>
-                    <li class="image-portfolio portfolio__image-item">
+                    <li class="image-portfolio portfolio__image-item ">
                         <img src="assest/img/portfolio/3.png" alt="portfolio-image-item">
                     </li>
                     <li class="image-portfolio portfolio__image-item">
@@ -167,14 +190,17 @@
                 </ul>
             </div>
         </article>
-        <article class="about" id="about">
+        <div id="about"></div>
+        <article class="about">
             <div class="block-content">
                 <div class="about__title">
                     <h3>About Us</h3>
                 </div>
                 <div class="about__text">
-                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
-                        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo
+                        luctus,
+                        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+                        commodo,
                         tortor mauris condimentum nibh.</p>
                 </div>
                 <ul class="about__persons">
@@ -186,7 +212,8 @@
                             <h3>Adam Jensen</h3>
                         </div>
                         <div class="person__text">
-                            <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor
+                            <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
+                                dolor
                                 id lorem.</p>
                         </div>
                         <ul class="social person__social">
@@ -236,31 +263,45 @@
                 </ul>
             </div>
         </article>
-        <article class="quote" id="contact">
+        <div id="contact"></div>
+        <article class="quote">
             <div class="block-content">
                 <div class="quote__description">
                     <h3 class="quote__title">Get a Quote</h3>
-                    <p class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
+                    <p class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                        mollis,
                         non
                         commodo luctus,
-                        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+                        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+                        commodo,
                         tortor mauris condimentum nibh.</p>
                 </div>
                 <div class="form-contact-wrapper">
-                    <form class="form-quote" action="" class="form-quote">
-                        <input class="form-item form-quote__name" type="text" placeholder="Name (Required)" required>
+                    <form class="form-quote" action="">
+                        <input class="form-item form-quote__name" id="input-name" type="text"
+                               placeholder="Name (Required)" required>
                         <input class="form-item form-quote__email" type="email" placeholder="Email (Required)" required>
-                        <input class="form-item form-quote__subject" type="text" placeholder="Subject">
-                        <textarea class="form-item form-item__textarea form-quote__description" name="description"
-                                  id="description" cols="30"
+                        <input class="form-item form-quote__subject" id="subject" type="text" placeholder="Subject">
+                        <textarea class="form-item form-item__textarea form-quote__description" id="description"
+                                  name="description"
+                                  cols="30"
                                   rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <input class="form-quote__submit-button" type="submit" value="Submit">
+                        <input class="button form-quote__submit-button" id="submit-button" type="submit" value="Submit">
                     </form>
+                    <div class="popup quote__popup hidden" id="quote-popup-block">
+                        <div class="popup__message">
+                            <p>Письмо отправлено<span id="result"></span></p>
+                            <br>
+                            <button class="button popup-button" id="popup-close-btn" value="OK">OK</button>
+                        </div>
+                    </div>
                     <div class="contact-info form-contact-wrapper__contact-info">
                         <div class="contact-info__title">Contact Information</div>
-                        <div class="contact-info__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                        <div class="contact-info__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                            nibh.
                             Fusce
-                            vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus.
+                            vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
+                            faucibus.
                             Morbi at aliquet turpis, et consequat felis.
                         </div>
                         <ul class="contact-info__contact-items">
@@ -303,5 +344,6 @@
         </footer>
     </main>
 </div>
+<script src="index.js"></script>
 </body>
 </html>
