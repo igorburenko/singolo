@@ -64,7 +64,7 @@ html {
 .header {
     position: fixed;
     top: 0;
-    z-index: 900;
+    z-index: 105;
     width: 1020px;
     height: 89px;
     background-color: #2d303a;
@@ -199,13 +199,14 @@ main {
 
 /*Arrow*/
 .arrow {
-    border: solid #ca4549;
+    border: solid rgba(0, 0, 0, 0.2);
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 8px;
     border-radius: 14%;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    z-index: 101;
 }
 
 .arrow_blue {
@@ -213,7 +214,7 @@ main {
 }
 
 .arrow:hover {
-    border-color: #673333;
+    border-color: rgba(0, 0, 0, 0.45);
     transition: all 0.2s ease-out;
 }
 
@@ -687,11 +688,6 @@ main {
     -webkit-text-fill-color: #f48c8f;
 }
 
-/*.input:-internal-autofill-selected {*/
-/*    color: #f48c8f;*/
-/*    background-color: #d6564f;*/
-/*}*/
-
 .form-item__textarea {
     height: 192px;
     width: 602px;
@@ -766,22 +762,28 @@ main {
     top: 0;
     left: 0;
     background-color: #0009;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 106;
 }
 
 .popup__message {
-    position: fixed;
+    /*position: fixed;*/
     padding: 20px;
-    top: 35%;
-    left: calc(50% - 150px);
+    /*top: 35%;*/
+    /*left: calc(50% - 150px);*/
     color: white;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
     background-color: #d6564f70;
-    width: 350px;
-    max-height: 250px;
+    max-width: 350px;
+    max-height: 350px;
     text-overflow: ellipsis;
     overflow: hidden;
+    z-index: 107;
 }
 
 .hidden {

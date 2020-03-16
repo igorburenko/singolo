@@ -1,6 +1,5 @@
 window.onload = function () {
 
-
     const NAVIGATION = document.getElementById('navigation');
     const PORTFOLIO_FILTER = document.getElementById('portfolio_buttons');
     const BUTTON_SUBMIT = document.getElementById('submit-button');
@@ -9,9 +8,7 @@ window.onload = function () {
     const PHONE_HORIZONTAL_SCREEN = document.getElementById('iphone-horizontal');
     const PHONE_VERTICAL_SCREEN = document.getElementById('iphone-vertical');
 
-    let iphoneVerticalScreenState = true,
-        iphoneHorizontalScreenState = true,
-        firstSliderItem = true,
+    let firstSliderItem = true,
         sliderAnimationEnd = true;
 
     NAVIGATION.addEventListener('click', (event) => {
@@ -64,23 +61,19 @@ window.onload = function () {
     }
 
 
-    BUTTON_OK.addEventListener('click', (event) => {
+    BUTTON_OK.addEventListener('click', () => {
         document.getElementById('quote-popup-block').classList.add('hidden')
     });
 
 //phone screens tap off
     PHONE_HORIZONTAL_SCREEN.addEventListener('click', (event) => {
-        iphoneHorizontalScreenState ?
-            document.getElementById('iphone-horizontal-screen').classList.add('screen_off') :
-            document.getElementById('iphone-horizontal-screen').classList.remove('screen_off');
-        iphoneHorizontalScreenState = !iphoneHorizontalScreenState;
+        if (event.target.id === 'iphone-horizontal-shadow') return;
+        document.getElementById('iphone-horizontal-screen').classList.toggle('screen_off');
     });
 
     PHONE_VERTICAL_SCREEN.addEventListener('click', (event) => {
-        iphoneVerticalScreenState ?
-            document.getElementById('iphone-vertical-screen').classList.add('screen_off') :
-            document.getElementById('iphone-vertical-screen').classList.remove('screen_off');
-        iphoneVerticalScreenState = !iphoneVerticalScreenState;
+        if (event.target.id === 'iphone-vertical-shadow') return;
+        document.getElementById('iphone-vertical-screen').classList.toggle('screen_off');
     });
 
 //слайдер
@@ -117,13 +110,9 @@ window.onload = function () {
                 }, {once: true});
             currentSlide.classList.add(firstOffset);
 
-            if (firstSliderItem) {
-                // arrow.forEach(element => element.classList.add('arrow_blue'));
-                background.classList.add('second-picture');
-            } else {
-                // arrow.forEach(element => element.classList.remove('arrow_blue'));
-                background.classList.remove('second-picture');
-            }
+            // arrow.forEach(element => element.classList.toggle('arrow_blue'));
+            background.classList.toggle('second-picture');
+            firstSliderItem = !firstSliderItem;
 
             currentSlide.addEventListener("transitionend",
                 () => {
@@ -134,10 +123,11 @@ window.onload = function () {
                     sliderAnimationEnd = !sliderAnimationEnd;
                 }, {once: true});
 
-            firstSliderItem = !firstSliderItem;
+
         }
     }
 
+    //portfolio images
     function portfolioGalleryGenerate(arr) {
         return arr.reduce((acc, val) => {
             return acc + `
