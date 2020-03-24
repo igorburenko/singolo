@@ -7,23 +7,29 @@ window.onload = function () {
     const PORTFOLIO_PICT = document.getElementById('portfolio-pictures');
     const PHONE_HORIZONTAL_SCREEN = document.getElementById('iphone-horizontal');
     const PHONE_VERTICAL_SCREEN = document.getElementById('iphone-vertical');
+    const BURGER_MENU = document.getElementById('menu-icon');
 
     let firstSliderItem = true,
         sliderAnimationEnd = true;
 
-    NAVIGATION.addEventListener('click', (event) => {
-        if (event.target.tagName !== 'A') return;
-        NAVIGATION.querySelectorAll('.navigation__item')
-            .forEach(el => el.classList.remove('navigation__item_active'));
-        event.target.classList.add('navigation__item_active');
+
+
+    BURGER_MENU.addEventListener('click', (event) => {
+        // if (event.target.tagName !== 'A') return;
+        openBurgerMenu (event);
     });
+
+    function openBurgerMenu (event) {
+        document.querySelector('.header-wrapper').classList.toggle('header__wrapper-close');
+        event.target.classList.toggle('menu-icon_active');
+    }
 
     PORTFOLIO_FILTER.addEventListener('click', (event) => {
         if (event.target.tagName !== 'LI') return;
         PORTFOLIO_FILTER.querySelectorAll('li')
             .forEach(el => el.classList.remove('portfolio__button-item_active'));
         event.target.classList.add('portfolio__button-item_active');
-        portfolioPrint();
+        printPortfolio();
     });
 
     PORTFOLIO_PICT.addEventListener('click', (event) => {
@@ -41,7 +47,7 @@ window.onload = function () {
             let messageText = getSubjectInput();
             messageText += getDescriptionInput();
             document.getElementById('result').innerText = messageText;
-            document.getElementById('quote-popup-block').classList.remove('hidden')
+            document.getElementById('quote-popup-block').classList.remove('hidden');
             document.querySelector('.form-quote').reset();
         }
     });
@@ -91,7 +97,6 @@ window.onload = function () {
             const nextSlide = document.getElementsByClassName(nextPicture)[0];
             const currentSlide = document.getElementsByClassName(currentPicture)[0];
             const background = document.getElementsByClassName('slider__Picture-wrapper')[0];
-            // const arrow = Array.from(document.getElementsByClassName('arrow'));
             let firstOffset, secondOffset;
 
             if (leftArrow) {
@@ -125,7 +130,7 @@ window.onload = function () {
     }
 
     //portfolio images
-    function portfolioPrint() {
+    function printPortfolio() {
         let pictures = document.querySelectorAll('.portfolio__image-item');
         let newArr = shuffle(Array.from(pictures));
         document.getElementById('portfolio-pictures').innerHTML = newArr.reduce((acc, event) =>
@@ -162,3 +167,4 @@ window.onload = function () {
 
     window.addEventListener('scroll', slideToAnchor);
 };
+
