@@ -133,7 +133,10 @@ html {
     transition: all 0.2s ease-out;
 }
 
-.navigation__item:hover,
+.navigation__item:hover{
+    cursor: pointer;
+}
+
 .navigation__item_active {
     color: #f06c64;
     transition: color 0.2s linear;
@@ -147,7 +150,7 @@ html {
 }
 
 main {
-    margin-top: 95px;
+    margin-top: 68px;
 }
 
 .slider {

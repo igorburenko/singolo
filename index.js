@@ -12,10 +12,7 @@ window.onload = function () {
     let firstSliderItem = true,
         sliderAnimationEnd = true;
 
-
-
     BURGER_MENU.addEventListener('click', (event) => {
-        // if (event.target.tagName !== 'A') return;
         openBurgerMenu (event);
     });
 
