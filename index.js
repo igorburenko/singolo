@@ -13,13 +13,20 @@ window.onload = function () {
         sliderAnimationEnd = true;
 
     BURGER_MENU.addEventListener('click', (event) => {
-        openBurgerMenu (event);
+        openBurgerMenu ();
     });
 
-    function openBurgerMenu (event) {
+    function openBurgerMenu () {
         document.querySelector('.header-wrapper').classList.toggle('header__wrapper-close');
-        event.target.classList.toggle('menu-icon_active');
+        BURGER_MENU.classList.toggle('menu-icon_active');
     }
+
+    NAVIGATION.addEventListener('click', (event) => {
+        if (event.target.tagName !== 'A') return;
+        if (screen.width < 768) {
+            openBurgerMenu();
+        }
+    });
 
     PORTFOLIO_FILTER.addEventListener('click', (event) => {
         if (event.target.tagName !== 'LI') return;
