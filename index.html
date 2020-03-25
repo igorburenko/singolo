@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext');
     </style>
@@ -14,22 +16,29 @@
 <body>
 <div class="wrapper">
     <header class="header" id="home">
-        <div class="header-wrapper">
-            <h1 class="logo header__logo">singolo<span>*</span></h1>
-            <nav class="navigation header__navigation" id="navigation">
-                <ul>
-                    <li><a class="navigation__item navigation__item_active" id="nav-home" href="#slider">home</a></li>
-                    <li class="navigation__dot">·</li>
-                    <li><a class="navigation__item" href="#services" id="nav-services">services</a></li>
-                    <li class="navigation__dot">·</li>
-                    <li><a class="navigation__item" href="#portfolio" id="nav-portfolio">portfolio</a></li>
-                    <li class="navigation__dot">·</li>
-                    <li><a class="navigation__item" href="#about" id="nav-about">about</a></li>
-                    <li class="navigation__dot">·</li>
-                    <li><a class="navigation__item" href="#contact" id="nav-contact">contact</a></li>
-                </ul>
-            </nav>
+        <div class="header__burger-menu">
+            <h1 class="logo header__menu-logo">singolo<span>*</span></h1>
         </div>
+        <div class="header-wrapper header__wrapper-close">
+            <div class="block-content header-wrap">
+                <h1 class="logo header__logo">singolo<span>*</span></h1>
+                <nav class="navigation header__navigation" id="navigation">
+                    <ul>
+                        <li><a class="navigation__item navigation__item_active" id="nav-home" href="#slider">home</a>
+                        </li>
+                        <li class="navigation__dot">·</li>
+                        <li><a class="navigation__item" href="#services" id="nav-services">services</a></li>
+                        <li class="navigation__dot">·</li>
+                        <li><a class="navigation__item" href="#portfolio" id="nav-portfolio">portfolio</a></li>
+                        <li class="navigation__dot">·</li>
+                        <li><a class="navigation__item" href="#about" id="nav-about">about</a></li>
+                        <li class="navigation__dot">·</li>
+                        <li><a class="navigation__item" href="#quote" id="nav-contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <span class="material-icons menu-icon" id="menu-icon">menu</span>
     </header>
     <main>
         <div id="slider"></div>
@@ -263,9 +272,9 @@
                 </ul>
             </div>
         </article>
-        <div id="contact"></div>
+        <div id="quote"></div>
         <article class="quote">
-            <div class="block-content">
+            <div class="block-content quote__wrapper">
                 <div class="quote__description">
                     <h3 class="quote__title">Get a Quote</h3>
                     <p class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis

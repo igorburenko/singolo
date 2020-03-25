@@ -7,23 +7,29 @@ window.onload = function () {
     const PORTFOLIO_PICT = document.getElementById('portfolio-pictures');
     const PHONE_HORIZONTAL_SCREEN = document.getElementById('iphone-horizontal');
     const PHONE_VERTICAL_SCREEN = document.getElementById('iphone-vertical');
+    const BURGER_MENU = document.getElementById('menu-icon');
 
     let firstSliderItem = true,
         sliderAnimationEnd = true;
 
-    NAVIGATION.addEventListener('click', (event) => {
-        if (event.target.tagName !== 'A') return;
-        NAVIGATION.querySelectorAll('.navigation__item')
-            .forEach(el => el.classList.remove('navigation__item_active'));
-        event.target.classList.add('navigation__item_active');
+
+
+    BURGER_MENU.addEventListener('click', (event) => {
+        // if (event.target.tagName !== 'A') return;
+        openBurgerMenu (event);
     });
+
+    function openBurgerMenu (event) {
+        document.querySelector('.header-wrapper').classList.toggle('header__wrapper-close');
+        event.target.classList.toggle('menu-icon_active');
+    }
 
     PORTFOLIO_FILTER.addEventListener('click', (event) => {
         if (event.target.tagName !== 'LI') return;
         PORTFOLIO_FILTER.querySelectorAll('li')
             .forEach(el => el.classList.remove('portfolio__button-item_active'));
         event.target.classList.add('portfolio__button-item_active');
-        portfolioPrint();
+        printPortfolio();
     });
 
     PORTFOLIO_PICT.addEventListener('click', (event) => {
@@ -41,8 +47,8 @@ window.onload = function () {
             let messageText = getSubjectInput();
             messageText += getDescriptionInput();
             document.getElementById('result').innerText = messageText;
-            document.getElementById('quote-popup-block').classList.remove('hidden')
-
+            document.getElementById('quote-popup-block').classList.remove('hidden');
+            document.querySelector('.form-quote').reset();
         }
     });
 
@@ -62,7 +68,7 @@ window.onload = function () {
 
 
     BUTTON_OK.addEventListener('click', () => {
-        document.getElementById('quote-popup-block').classList.add('hidden')
+        document.getElementById('quote-popup-block').classList.add('hidden');
     });
 
 //phone screens tap off
@@ -91,7 +97,6 @@ window.onload = function () {
             const nextSlide = document.getElementsByClassName(nextPicture)[0];
             const currentSlide = document.getElementsByClassName(currentPicture)[0];
             const background = document.getElementsByClassName('slider__Picture-wrapper')[0];
-            const arrow = Array.from(document.getElementsByClassName('arrow'));
             let firstOffset, secondOffset;
 
             if (leftArrow) {
@@ -110,7 +115,6 @@ window.onload = function () {
                 }, {once: true});
             currentSlide.classList.add(firstOffset);
 
-            // arrow.forEach(element => element.classList.toggle('arrow_blue'));
             background.classList.toggle('second-picture');
             firstSliderItem = !firstSliderItem;
 
@@ -122,24 +126,15 @@ window.onload = function () {
                     currentSlide.classList.remove(firstOffset);
                     sliderAnimationEnd = !sliderAnimationEnd;
                 }, {once: true});
-
-
         }
     }
 
     //portfolio images
-    function portfolioGalleryGenerate(arr) {
-        return arr.reduce((acc, val) => {
-            return acc + `
-        <li class="image-portfolio portfolio__image-item">
-             <img src="assest/img/portfolio/${val}.png" alt="portfolio-image-item">
-        </li>`
-        }, '');
-    }
-
-    function portfolioPrint() {
-        const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-        document.getElementById('portfolio-pictures').innerHTML = portfolioGalleryGenerate(shuffle(arr));
+    function printPortfolio() {
+        let pictures = document.querySelectorAll('.portfolio__image-item');
+        let newArr = shuffle(Array.from(pictures));
+        document.getElementById('portfolio-pictures').innerHTML = newArr.reduce((acc, event) =>
+            typeof acc === 'string' ? acc + event.outerHTML : acc.outerHTML + event.outerHTML);
     }
 
     function shuffle(arr) {
@@ -153,30 +148,23 @@ window.onload = function () {
         return arr;
     }
 
-    function slideToAnchor() {
-        if (window.pageYOffset > '643' && window.pageYOffset < '1145') {
-            NAVIGATION.querySelectorAll('.navigation__item')
-                .forEach(el => el.classList.remove('navigation__item_active'));
-            NAVIGATION.querySelector('#nav-services').classList.add('navigation__item_active');
-        } else if (window.pageYOffset > '-1' && window.pageYOffset < '644') {
-            NAVIGATION.querySelectorAll('.navigation__item')
-                .forEach(el => el.classList.remove('navigation__item_active'));
-            NAVIGATION.querySelector('#nav-home').classList.add('navigation__item_active');
-        } else if (window.pageYOffset > '1144' && window.pageYOffset < '2014') {
-            NAVIGATION.querySelectorAll('.navigation__item')
-                .forEach(el => el.classList.remove('navigation__item_active'));
-            NAVIGATION.querySelector('#nav-portfolio').classList.add('navigation__item_active');
-        } else if (window.pageYOffset > '2013' && window.pageYOffset < '2748') {
-            NAVIGATION.querySelectorAll('.navigation__item')
-                .forEach(el => el.classList.remove('navigation__item_active'));
-            NAVIGATION.querySelector('#nav-about').classList.add('navigation__item_active');
-        } else if (window.pageYOffset > '2747') {
-            NAVIGATION.querySelectorAll('.navigation__item')
-                .forEach(el => el.classList.remove('navigation__item_active'));
-            NAVIGATION.querySelector('#nav-contact').classList.add('navigation__item_active');
-        }
+    function slideToAnchor(event) {
+        const currentPos = window.scrollY;
+        const articles = document.querySelectorAll('main>article');
+
+        articles.forEach((element) => {
+            if (currentPos + 95 >= element.offsetTop && currentPos + 95 < (element.offsetTop + element.offsetHeight)) {
+                NAVIGATION.querySelectorAll('a').forEach((el) => {
+                    el.classList.remove('navigation__item_active');
+
+                    if (element.getAttribute('class') === el.getAttribute('href').substring(1)) {
+                        el.classList.add('navigation__item_active');
+                    }
+                })
+            }
+        });
     }
 
-    window.addEventListener('scroll', () => slideToAnchor());
-
+    window.addEventListener('scroll', slideToAnchor);
 };
+
