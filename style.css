@@ -149,8 +149,12 @@ html {
     cursor: default;
 }
 
+#menu-icon{
+    display: none;
+}
+
 main {
-    margin-top: 68px;
+    margin-top: 95px;
 }
 
 .slider {
@@ -1174,6 +1178,7 @@ main {
     }
 
     #menu-icon {
+        display: inline;
         position: fixed;
         top: 20px;
         left: 20px;
