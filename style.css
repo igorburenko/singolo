@@ -645,10 +645,6 @@ main {
     margin: 0 auto;
 }
 
-.quote__description {
-
-}
-
 .quote__title {
     font-size: 30px;
     line-height: 18px;
@@ -992,6 +988,10 @@ main {
 
     }
 
+    .services__title {
+        padding-top: 40px;
+    }
+
     .services__text {
         width: 100%;
         height: auto;
@@ -1004,6 +1004,8 @@ main {
     .services__items-section {
         width: 100%;
         height: auto;
+        margin-top: 36px;
+        margin-bottom: 17px;
     }
 
     .item-service__text-container {
@@ -1016,8 +1018,12 @@ main {
         height: 56px;
     }
 
+    .services__item {
+        margin-bottom: 57px;
+    }
+
     .item-service {
-        width: 50%;
+        width: 49%;
     }
 
     .block-content {
@@ -1030,6 +1036,7 @@ main {
 
     .portfolio__text {
         width: 100%;
+        letter-spacing: 0;
     }
 
     .portfolio__pictures {
@@ -1075,13 +1082,14 @@ main {
 
     .about__text {
         width: 100%;
-        margin-top: 14px;
+        margin-top: 20px;
     }
 
     .about__persons {
         flex: 1 0 25%;
         width: auto;
         height: auto;
+        margin-top: 38px;
     }
 
     .person {
@@ -1092,10 +1100,20 @@ main {
         width: 100%;
     }
 
+
+    .person__title {
+        padding-top: 6px;
+    }
+
     .person__text {
         width: 100%;
         height: auto;
         overflow: auto;
+        margin-top: 2px;
+    }
+
+    .person__social {
+        margin-top: 12px;
     }
 
     .quote {
@@ -1103,13 +1121,13 @@ main {
     }
 
     .quote__title {
-        padding-top: 58px;
+        padding-top: 62px;
     }
 
     .quote__text {
         width: 100%;
         height: auto;
-        padding-top: 23px;
+        padding-top: 27px;
     }
 
     .form-quote {
@@ -1119,7 +1137,7 @@ main {
 
     .form-contact-wrapper {
         padding-bottom: 40px;
-        margin-top: 30px;
+        margin-top: 24px;
     }
 
     .form-contact-wrapper__contact-info {
@@ -1132,16 +1150,31 @@ main {
     }
 
     .form-item {
-        width: calc(100% - 16px);
+        width: calc(100% - 19px);
+        margin-bottom: 12px;
     }
 
     .form-item__textarea {
-        width: calc(100% - 17px);
+        width: calc(100% - 20px);
+        height: 150px;
+        margin-bottom: 17px;
+    }
+
+    .button {
+        width: 135px;
+        height: 38px;
+        margin: 0;
     }
 
     .contact-info__text {
         width: 100%;
         height: auto;
+        padding-top: 4px;
+    }
+
+    .contact-info__contact-items {
+        margin-top: 13px;
+        margin-left: 0;
     }
 }
 
@@ -1291,6 +1324,7 @@ main {
 
     .services__items-section {
         margin-top: 27px;
+        margin-bottom: -7px;
     }
 
     .item-service {
@@ -1311,11 +1345,11 @@ main {
     }
 
     .portfolio__title {
-        padding-top: 38px;
+        padding-top: 42px;
     }
 
     .portfolio__buttons {
-        margin-top: 16px;
+        margin-top: 18px;
     }
 
     .portfolio__image-item {
@@ -1332,7 +1366,7 @@ main {
     }
 
     .about {
-        padding-bottom: 2px;
+        padding-bottom: 8px;
     }
 
     .about__title {
@@ -1340,12 +1374,12 @@ main {
     }
 
     .about__text {
-        letter-spacing: 0;
+        letter-spacing: 0.2px;
     }
 
     .about__persons {
         flex-wrap: wrap;
-        margin-top: 28px;
+        margin-top: 23px;
     }
 
     .person {
@@ -1353,9 +1387,12 @@ main {
     }
 
     .about__person-item {
-        margin-bottom: 35px;
+        margin-bottom: 32px;
     }
 
+    .person__title {
+        padding-top: 13px;
+    }
 
     .person__text {
         margin-top: 0;
@@ -1363,6 +1400,10 @@ main {
 
     .person__social {
         margin-top: 14px;
+    }
+
+    .quote__title {
+        padding-top: 54px;
     }
 
     .form-contact-wrapper {
@@ -1422,6 +1463,4 @@ main {
         padding: 0 5px;
         margin-right: 8px;
     }
-
-
 }
