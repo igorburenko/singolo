@@ -133,7 +133,10 @@ html {
     transition: all 0.2s ease-out;
 }
 
-.navigation__item:hover,
+.navigation__item:hover{
+    cursor: pointer;
+}
+
 .navigation__item_active {
     color: #f06c64;
     transition: color 0.2s linear;
@@ -144,6 +147,10 @@ html {
     font-weight: 700;
     color: #494e62;
     cursor: default;
+}
+
+#menu-icon{
+    display: none;
 }
 
 main {
@@ -1171,6 +1178,7 @@ main {
     }
 
     #menu-icon {
+        display: inline;
         position: fixed;
         top: 20px;
         left: 20px;
